@@ -33,7 +33,7 @@ This pillar provides the foundational body of knowledge required to understand a
 | Resource | Link |
 |---|---|
 | Book | [Absolutely Essential AI and ML](https://github.com/alexdibol/ai_essentials/blob/main/BOOK%20ABSOLUTELY%20ESSENTIAL%20AI%20AND%20ML.pdf) |
-| Deck | [Absolutely Essential AI Deck](https://drive.google.com/file/d/1anIcLtErEtel9GRJJhEEy5EPs33xrLH4/view?usp=sharing) |
+| Deck | [Absolutely Essential AI Deck](https://drive.google.com/file/d/1fPsuXR4TeLIE7Yul8BTU1j-r_WCVa9K8/view?usp=sharing) |
 | Colab Notebooks | [AI Essentials Notebooks](https://github.com/alexdibol/ai_essentials/tree/main/notebooks) |
 
 ---
@@ -160,4 +160,3 @@ Except where otherwise credited to third parties, all original text, explanatory
 This work is released under the terms of the MIT License.
 
 Where third-party libraries, datasets, trademarks, excerpts, images, or other externally owned elements are used, their respective licenses and rights remain fully in force and are not superseded by this notice.
-
