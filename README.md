@@ -33,8 +33,8 @@ This pillar provides the foundational body of knowledge required to understand a
 | Resource | Link |
 |---|---|
 | Book | [Absolutely Essential AI and ML](https://github.com/alexdibol/ai_essentials/blob/main/BOOK%20ABSOLUTELY%20ESSENTIAL%20AI%20AND%20ML.pdf) |
-| Colab Notebooks | [AI Essentials Notebooks](https://github.com/alexdibol/ai_essentials/tree/main/notebooks) |
 | Deck | [Absolutely Essential AI Deck](https://drive.google.com/file/d/1zsYkWmMiguvPLWRhQqqpoDoMq0KczLx2/view?usp=sharing) |
+| Colab Notebooks | [AI Essentials Notebooks](https://github.com/alexdibol/ai_essentials/tree/main/notebooks) |
 
 ---
 
@@ -46,7 +46,8 @@ This pillar develops a complete framework for understanding AI as an institution
 | Resource | Link |
 |---|---|
 | Book | [Framework for Institutional Implementation](https://drive.google.com/file/d/1gq3Mjw63NCgbXsfMGI5fgbWAjBUMSuJf/view?usp=drive_link) |
-| Deck | [Governance-First Implementation Deck](https://docs.google.com/presentation/d/1cF3F_OQEYm3b6XAmeCPy8n8N2kuy-wDl4DmJXVlSqNE/edit?usp=sharing) |
+| Deck | [Governance-First Implementation Deck](https://drive.google.com/file/d/1JO1J3lPv8T6pDWbdVS44EKdkxwU_DQrO/view?usp=sharing) |
+| Colab Notebooks | Hands-on examples that illustrate governance-first implementation, improve understanding, and build practical intuition about AI as an institutional process. |
 
 ---
 
@@ -159,4 +160,3 @@ Except where otherwise credited to third parties, all original text, explanatory
 This work is released under the terms of the MIT License.
 
 Where third-party libraries, datasets, trademarks, excerpts, images, or other externally owned elements are used, their respective licenses and rights remain fully in force and are not superseded by this notice.
-
