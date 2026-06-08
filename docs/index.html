@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI for Financial Leaders | Summer Course</title>
+  <title>AI Summer Course | Three Pillars for Institutional Implementation</title>
   <style>
     :root {
       --cambridge-blue: #003c71;
+      --cambridge-blue-2: #0b4f87;
       --cambridge-light: #e8f1f8;
       --ink: #18212f;
       --muted: #5f6b7a;
@@ -15,20 +16,37 @@
       --soft: #f6f8fb;
       --accent: #b48a2c;
       --accent-soft: #fff5dc;
+      --green-soft: #eef7f0;
       --shadow: 0 18px 45px rgba(0, 35, 70, 0.12);
       --radius: 22px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Georgia, 'Times New Roman', serif;
       color: var(--ink);
       background: linear-gradient(180deg, #ffffff 0%, var(--soft) 100%);
       line-height: 1.65;
     }
-    a { color: inherit; text-decoration: none; }
-    .page { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
     .topbar {
       border-bottom: 1px solid var(--line);
@@ -38,6 +56,7 @@
       top: 0;
       z-index: 50;
     }
+
     .topbar-inner {
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
@@ -47,7 +66,13 @@
       padding: 18px 0;
       gap: 24px;
     }
-    .brand { display: flex; flex-direction: column; gap: 2px; }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
     .brand strong {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
@@ -55,25 +80,43 @@
       text-transform: uppercase;
       color: var(--cambridge-blue);
     }
-    .brand span { font-size: 0.88rem; color: var(--muted); }
+
+    .brand span {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
     .nav {
       display: flex;
-      gap: 18px;
+      gap: 14px;
       align-items: center;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.88rem;
       color: var(--muted);
     }
-    .nav a { padding: 8px 10px; border-radius: 999px; transition: all 0.18s ease; }
-    .nav a:hover { color: var(--cambridge-blue); background: var(--cambridge-light); }
 
-    .hero { padding: 78px 0 48px; }
+    .nav a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      transition: all 0.18s ease;
+    }
+
+    .nav a:hover {
+      color: var(--cambridge-blue);
+      background: var(--cambridge-light);
+    }
+
+    .hero {
+      padding: 78px 0 48px;
+    }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.18fr 0.82fr;
       gap: 44px;
       align-items: center;
     }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -90,6 +133,7 @@
       text-transform: uppercase;
       margin-bottom: 22px;
     }
+
     .eyebrow::before {
       content: '';
       width: 9px;
@@ -98,6 +142,7 @@
       background: var(--accent);
       display: inline-block;
     }
+
     h1 {
       font-size: clamp(2.45rem, 5vw, 5.05rem);
       line-height: 1.02;
@@ -105,12 +150,14 @@
       color: var(--cambridge-blue);
       margin-bottom: 26px;
     }
+
     .hero-copy {
       font-size: 1.17rem;
       color: #344255;
       max-width: 790px;
       margin-bottom: 22px;
     }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +165,7 @@
       align-items: center;
       margin-top: 10px;
     }
+
     .button {
       display: inline-flex;
       align-items: center;
@@ -130,10 +178,27 @@
       border: 1px solid transparent;
       transition: all 0.18s ease;
     }
-    .button.primary { background: var(--cambridge-blue); color: white; box-shadow: 0 10px 24px rgba(0, 60, 113, 0.18); }
-    .button.primary:hover { transform: translateY(-1px); box-shadow: 0 16px 30px rgba(0, 60, 113, 0.23); }
-    .button.secondary { background: white; color: var(--cambridge-blue); border-color: var(--line); }
-    .button.secondary:hover { background: var(--cambridge-light); }
+
+    .button.primary {
+      background: var(--cambridge-blue);
+      color: white;
+      box-shadow: 0 10px 24px rgba(0, 60, 113, 0.18);
+    }
+
+    .button.primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0, 60, 113, 0.23);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--cambridge-blue);
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: var(--cambridge-light);
+    }
 
     .hero-panel {
       background: var(--paper);
@@ -142,13 +207,44 @@
       box-shadow: var(--shadow);
       padding: 28px;
     }
-    .hero-panel h2 { color: var(--cambridge-blue); font-size: 1.35rem; line-height: 1.2; margin-bottom: 14px; }
-    .hero-panel p { color: var(--muted); font-size: 1rem; margin-bottom: 20px; }
-    .mini-list { display: grid; gap: 12px; font-family: Arial, Helvetica, sans-serif; font-size: 0.92rem; color: #354255; }
-    .mini-list div { border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; background: #fbfdff; }
 
-    section { padding: 42px 0; }
-    .section-header { max-width: 900px; margin-bottom: 28px; }
+    .hero-panel h2 {
+      color: var(--cambridge-blue);
+      font-size: 1.35rem;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero-panel p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      color: #354255;
+    }
+
+    .mini-list div {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: #fbfdff;
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-header {
+      max-width: 960px;
+      margin-bottom: 28px;
+    }
+
     .section-kicker {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.82rem;
@@ -158,6 +254,7 @@
       color: var(--accent);
       margin-bottom: 8px;
     }
+
     h2.section-title {
       color: var(--cambridge-blue);
       font-size: clamp(1.8rem, 3vw, 2.55rem);
@@ -165,79 +262,188 @@
       letter-spacing: -0.025em;
       margin-bottom: 12px;
     }
-    .section-copy { color: var(--muted); font-size: 1.08rem; }
 
-    .pillars, .audience-grid, .implementation-grid, .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.08rem;
     }
-    .pillar, .audience-card, .implementation-card, .resource-card {
+
+    .pillar-stack {
+      display: grid;
+      gap: 28px;
+    }
+
+    .pillar-card {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 10px 28px rgba(0, 35, 70, 0.06);
+      box-shadow: 0 12px 34px rgba(0, 35, 70, 0.08);
+      overflow: hidden;
     }
-    .pillar .number, .audience-card .number {
-      width: 42px;
-      height: 42px;
+
+    .pillar-head {
+      padding: 26px 28px;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f3f7fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pillar-number {
+      width: 62px;
+      height: 62px;
       border-radius: 50%;
-      background: var(--cambridge-light);
-      color: var(--cambridge-blue);
+      background: var(--cambridge-blue);
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.35rem;
       font-weight: 800;
-      margin-bottom: 18px;
+      box-shadow: 0 12px 24px rgba(0, 60, 113, 0.16);
     }
-    .pillar h3, .audience-card h3, .implementation-card h3, .resource-card h3 {
-      color: var(--cambridge-blue);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      line-height: 1.25;
-    }
-    .pillar p, .audience-card p, .implementation-card p, .resource-card p { color: var(--muted); font-size: 0.98rem; }
 
-    .resource-card { overflow: hidden; display: flex; flex-direction: column; min-height: 100%; padding: 0; }
-    .resource-card-header {
-      padding: 24px 24px 18px;
-      background: linear-gradient(135deg, #ffffff 0%, #f3f7fb 100%);
-      border-bottom: 1px solid var(--line);
-      flex: 1;
+    .pillar-head h3 {
+      color: var(--cambridge-blue);
+      font-size: clamp(1.45rem, 2.3vw, 2.05rem);
+      line-height: 1.12;
+      margin-bottom: 7px;
     }
-    .resource-label, .implementation-tag {
+
+    .pillar-head p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .pillar-body {
+      padding: 28px;
+    }
+
+    .resource-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .resource-button {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.18s ease;
+      min-height: 142px;
+    }
+
+    .resource-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 35, 70, 0.08);
+      border-color: #bfd2e5;
+      background: #fbfdff;
+    }
+
+    .resource-type {
       font-family: Arial, Helvetica, sans-serif;
+      color: var(--accent);
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .resource-title {
+      color: var(--cambridge-blue);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .resource-desc {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .resource-arrow {
+      margin-top: auto;
+      color: var(--cambridge-blue);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+    }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .domain-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+    }
+
+    .domain-index {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.11em;
       color: var(--accent);
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-    .resource-card h3 { font-size: 1.45rem; }
-    .resource-links { padding: 22px 24px 24px; display: grid; gap: 12px; font-family: Arial, Helvetica, sans-serif; }
-    .resource-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 13px 14px;
-      color: var(--cambridge-blue);
-      font-weight: 700;
-      transition: all 0.18s ease;
-    }
-    .resource-link:hover { background: var(--cambridge-light); transform: translateY(-1px); }
-    .resource-link span:last-child { color: var(--accent); white-space: nowrap; }
 
-    .access-strip {
-      border-radius: var(--radius);
+    .domain-card h4 {
+      color: var(--cambridge-blue);
+      font-size: 1.1rem;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+
+    .domain-card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+      margin-bottom: 14px;
+    }
+
+    .domain-links {
+      margin-top: auto;
+      display: grid;
+      gap: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .domain-links a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 11px;
+      color: var(--cambridge-blue);
+      font-weight: 800;
+      font-size: 0.82rem;
+      background: #fbfdff;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .domain-links a:hover {
+      background: var(--cambridge-light);
+    }
+
+    .callout {
       background: var(--cambridge-blue);
       color: white;
+      border-radius: var(--radius);
       padding: 34px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -245,10 +451,26 @@
       align-items: center;
       box-shadow: var(--shadow);
     }
-    .access-strip h2 { font-size: 2rem; line-height: 1.1; margin-bottom: 10px; }
-    .access-strip p { color: rgba(255, 255, 255, 0.82); font-size: 1.03rem; }
-    .access-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
-    .access-buttons a {
+
+    .callout h2 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .callout p {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 1.03rem;
+    }
+
+    .callout-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .callout-buttons a {
       background: white;
       color: var(--cambridge-blue);
       border-radius: 999px;
@@ -256,6 +478,32 @@
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 800;
       font-size: 0.88rem;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .audience-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(0, 35, 70, 0.06);
+    }
+
+    .audience-card h3 {
+      color: var(--cambridge-blue);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .audience-card p {
+      color: var(--muted);
+      font-size: 0.98rem;
     }
 
     .footer {
@@ -266,6 +514,7 @@
       border-top: 1px solid var(--line);
       margin-top: 36px;
     }
+
     .footer-inner {
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
@@ -275,16 +524,60 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 1000px) {
-      .hero-grid, .resource-grid, .pillars, .audience-grid, .implementation-grid, .access-strip { grid-template-columns: 1fr; }
-      .nav { display: none; }
-      .hero { padding-top: 48px; }
-      .access-buttons { justify-content: flex-start; }
+    @media (max-width: 1120px) {
+      .domain-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    @media (max-width: 560px) {
-      .page, .topbar-inner, .footer-inner { width: min(100% - 26px, 1180px); }
-      .hero-panel, .pillar, .audience-card, .implementation-card, .resource-card-header, .resource-links, .access-strip { padding: 20px; }
-      .hero-actions, .button { width: 100%; }
+
+    @media (max-width: 1000px) {
+      .hero-grid,
+      .resource-row,
+      .callout,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .callout-buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page,
+      .topbar-inner,
+      .footer-inner {
+        width: min(100% - 26px, 1180px);
+      }
+
+      .hero-panel,
+      .pillar-head,
+      .pillar-body,
+      .callout,
+      .audience-card {
+        padding: 20px;
+      }
+
+      .pillar-head {
+        grid-template-columns: 1fr;
+      }
+
+      .domain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -292,15 +585,15 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <strong>AI Summer Course for Financial Leaders</strong>
-        <span>Understand AI · Govern AI · Implement AI in Finance</span>
+        <strong>AI Summer Course</strong>
+        <span>Three Pillars for Institutional Implementation in Finance</span>
       </div>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#course">Course</a>
-        <a href="#pillars">Three Pillars</a>
-        <a href="#implementation">Implementation</a>
-        <a href="#audience">Audience</a>
-        <a href="#materials">Documents</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#pillar-1">Pillar 1</a>
+        <a href="#pillar-2">Pillar 2</a>
+        <a href="#pillar-3">Pillar 3</a>
         <a href="#access">Quick Access</a>
       </nav>
     </div>
@@ -310,29 +603,29 @@
     <section class="hero page" id="course">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">Summer Course · AI Leadership · Finance · Institutional Implementation</div>
-          <h1>AI for Financial Leaders: From Understanding to Governance to Implementation</h1>
+          <div class="eyebrow">Summer Course · AI · Governance · Financial Domains</div>
+          <h1>AI for Financial Professionals: From Understanding to Institutional Implementation</h1>
           <p class="hero-copy">
-            The Summer Course is the complete version of the AI programme for financial professionals and institutional decision-makers. It is designed for leaders who do not merely want to use AI tools, but need to understand what AI is, how it becomes an industrial process inside organizations, and how it can be implemented responsibly across the financial sector.
+            The Summer Course is a complete preparation program for leaders who need to understand artificial intelligence, govern it as an institutional production process, and implement it responsibly across the financial sector.
           </p>
           <p class="hero-copy">
-            The course rests on three pillars: the absolute basics that give participants the context to understand AI; the governance and operating model required to treat AI as a corporate capability rather than a chatbot experiment; and hands-on domain-by-domain implementation across finance. AI must be understood, then governed, and only then can institutions reap the enormous potential of the biggest technological revolution of our time.
+            AI is not only about chatbots. It is the largest technological and organizational revolution of our time. To reap its potential, professionals must first understand it, then govern it, and only then deploy it inside real financial workflows with accountability, auditability, and institutional discipline.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#pillars">Explore the Three Pillars</a>
-            <a class="button secondary" href="#materials">Access Course Materials</a>
+            <a class="button secondary" href="#pillar-3">Go to Financial Domains</a>
           </div>
         </div>
 
         <aside class="hero-panel" aria-label="Course summary">
           <h2>Course Orientation</h2>
           <p>
-            This is a leadership course for institutional AI readiness. It prepares participants to move from curiosity and experimentation toward governed, auditable, scalable, and sector-specific implementation.
+            This course addresses industry leaders, corporate leaders, startup leaders, financial professionals, and institutional decision-makers preparing for AI implementation.
           </p>
           <div class="mini-list">
-            <div><strong>Understand:</strong> Build the conceptual foundations needed to read, discuss, evaluate, and direct AI initiatives with confidence.</div>
-            <div><strong>Govern:</strong> Treat AI as an industrial process requiring accountability, controls, evidence boundaries, auditability, and organizational design.</div>
-            <div><strong>Implement:</strong> Translate AI into concrete financial-sector applications across domains, functions, workflows, and institutional responsibilities.</div>
+            <div><strong>Understand:</strong> Build the essential conceptual and technical context needed to understand AI, not merely use it.</div>
+            <div><strong>Govern:</strong> Treat AI as an industrial process requiring controls, operating models, governance, and institutional accountability.</div>
+            <div><strong>Implement:</strong> Move domain by domain through the financial sector to study hands-on implementation.</div>
           </div>
         </aside>
       </div>
@@ -340,159 +633,186 @@
 
     <section class="page" id="pillars">
       <div class="section-header">
-        <div class="section-kicker">The Three-Pillar Architecture</div>
-        <h2 class="section-title">A complete preparation for institutional AI implementation</h2>
+        <div class="section-kicker">Course Architecture</div>
+        <h2 class="section-title">Three pillars for complete institutional readiness</h2>
         <p class="section-copy">
-          The Summer Course is more complete than the Easter edition because it does not stop at awareness, technical vocabulary, or isolated demonstrations. It builds a full leadership pathway: first understanding AI, then governing AI as a corporate production system, and finally applying AI across the domains of the financial sector.
-        </p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar">
-          <div class="number">1</div>
-          <h3>The Absolute Basics</h3>
-          <p>
-            Participants build the essential context required to understand AI, not just use it. This pillar gives leaders the language, intuition, and conceptual map needed to understand models, data, training, inference, reasoning, agents, automation, and the limits of AI systems.
-          </p>
-        </article>
-
-        <article class="pillar">
-          <div class="number">2</div>
-          <h3>AI as an Industrial Process under Governance</h3>
-          <p>
-            AI is not about chatbots. It is about corporate implementation. This pillar explains AI as an institutional production process requiring governance, controls, roles, policies, verification, risk management, auditability, compliance, and human accountability.
-          </p>
-        </article>
-
-        <article class="pillar">
-          <div class="number">3</div>
-          <h3>Domain-by-Domain Financial Implementation</h3>
-          <p>
-            The final pillar moves from general principles to hands-on implementation. It examines how AI can be applied across the financial sector, including investment, risk, credit, research, compliance, operations, reporting, advisory, and strategic decision-making.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="page" id="implementation">
-      <div class="section-header">
-        <div class="section-kicker">From Knowledge to Execution</div>
-        <h2 class="section-title">AI must be understood, governed, and then deployed</h2>
-        <p class="section-copy">
-          The course is built around a simple institutional sequence. Leaders first need enough AI literacy to avoid being passive consumers of vendor narratives. They then need a governance model to convert experimentation into organizational capability. Finally, they need domain-specific implementation patterns that show where AI creates value in real financial workflows.
-        </p>
-      </div>
-
-      <div class="implementation-grid">
-        <article class="implementation-card">
-          <div class="implementation-tag">Step 01</div>
-          <h3>Understand the Technology</h3>
-          <p>Participants learn what AI systems are doing, why they are powerful, where they fail, and how to interpret the claims made by vendors, teams, consultants, and internal champions.</p>
-        </article>
-        <article class="implementation-card">
-          <div class="implementation-tag">Step 02</div>
-          <h3>Build the Governance Layer</h3>
-          <p>The course frames governance as part of the architecture: evidence standards, review mechanisms, escalation paths, reproducibility, testing, model risk, and accountability are designed into the operating model.</p>
-        </article>
-        <article class="implementation-card">
-          <div class="implementation-tag">Step 03</div>
-          <h3>Implement in Financial Domains</h3>
-          <p>Participants examine how AI can support concrete workflows in finance, moving from generic enthusiasm to disciplined use cases, institutional playbooks, and practical implementation logic.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="page" id="audience">
-      <div class="section-header">
-        <div class="section-kicker">Who the Course Is For</div>
-        <h2 class="section-title">Designed for leaders who must make AI real</h2>
-        <p class="section-copy">
-          The Summer Course addresses leaders responsible for decisions, budgets, teams, products, strategy, governance, and institutional transformation. It is not a coding bootcamp and it is not a superficial tour of AI tools. It is a leadership formation for the age of AI implementation.
+          The Summer Course is organized around three pillars. The first pillar provides the absolute essentials of AI and machine learning. The second pillar explains how AI becomes an institutional production capability that requires governance-first implementation. The third pillar translates those foundations into concrete financial domains.
         </p>
       </div>
 
       <div class="audience-grid">
         <article class="audience-card">
-          <div class="number">A</div>
-          <h3>Industry Leaders</h3>
-          <p>For senior professionals who need to understand where AI is transforming finance, how competitive advantage may emerge, and what institutional capabilities must be built now.</p>
+          <h3>Pillar 1. Absolutely Essential AI</h3>
+          <p>The foundational layer: the minimum body of knowledge leaders need in order to understand AI and ML with confidence.</p>
         </article>
         <article class="audience-card">
-          <div class="number">B</div>
-          <h3>Corporate Leaders</h3>
-          <p>For executives, board members, committee members, and managers who must evaluate AI initiatives, supervise implementation, govern risk, and convert strategy into operating discipline.</p>
+          <h3>Pillar 2. Governance-First Implementation</h3>
+          <p>The institutional layer: AI as an industrial process with operating models, controls, governance, auditability, and accountability.</p>
         </article>
         <article class="audience-card">
-          <div class="number">C</div>
-          <h3>Startup Leaders</h3>
-          <p>For founders and innovation leaders who need to transform AI potential into products, workflows, platforms, advisory services, governance frameworks, and scalable financial-sector solutions.</p>
+          <h3>Pillar 3. Financial Domain Implementation</h3>
+          <p>The applied layer: hands-on implementation across corporate law, accounting and audit, financial advice, consulting, and investment banking.</p>
         </article>
       </div>
     </section>
 
-    <section class="page" id="materials">
+    <section class="page" id="resources">
       <div class="section-header">
-        <div class="section-kicker">Core Documents</div>
-        <h2 class="section-title">Easy access to the Summer Course materials</h2>
+        <div class="section-kicker">Resource Map</div>
+        <h2 class="section-title">Books, decks, and notebooks by pillar</h2>
         <p class="section-copy">
-          The documents below provide immediate access to the central course materials. They operate as navigational anchors for the broader learning ecosystem: books and papers, videos, podcasts, specialized decks, and Google Colab notebooks.
+          Each pillar below contains the exact course resources for that part of the Summer Course. The links are organized so that students can move directly from conceptual reading to visual review and executable implementation.
         </p>
       </div>
 
-      <div class="resource-grid">
-        <article class="resource-card">
-          <div class="resource-card-header">
-            <div class="resource-label">Core Document 01</div>
-            <h3>Course Book</h3>
-            <p>
-              The main book develops the complete logic of the Summer Course: AI foundations, governance, industrial implementation, institutional readiness, and financial-sector applications.
-            </p>
+      <div class="pillar-stack">
+        <article class="pillar-card" id="pillar-1">
+          <div class="pillar-head">
+            <div class="pillar-number">1</div>
+            <div>
+              <h3>Absolutely Essential AI</h3>
+              <p>
+                The absolute basics. This is the ground that gives participants the context to understand AI, not just use it.
+              </p>
+            </div>
           </div>
-          <div class="resource-links">
-            <a class="resource-link" href="https://drive.google.com/file/d/1gq3Mjw63NCgbXsfMGI5fgbWAjBUMSuJf/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>Open Book</span><span>↗</span></a>
+          <div class="pillar-body">
+            <div class="resource-row">
+              <a class="resource-button" href="https://github.com/alexdibol/ai_essentials/blob/main/BOOK%20ABSOLUTELY%20ESSENTIAL%20AI%20AND%20ML.pdf" target="_blank" rel="noopener noreferrer">
+                <span class="resource-type">Book</span>
+                <span class="resource-title">Absolutely Essential AI and ML</span>
+                <span class="resource-desc">The core conceptual text for understanding the foundational ideas of AI and machine learning.</span>
+                <span class="resource-arrow">Open Book ↗</span>
+              </a>
+              <a class="resource-button" href="https://github.com/alexdibol/ai_essentials/tree/main/notebooks" target="_blank" rel="noopener noreferrer">
+                <span class="resource-type">Colab Notebooks</span>
+                <span class="resource-title">AI Essentials Notebooks</span>
+                <span class="resource-desc">Executable notebooks supporting the foundational AI and ML material.</span>
+                <span class="resource-arrow">Open Notebooks ↗</span>
+              </a>
+              <a class="resource-button" href="https://drive.google.com/file/d/1zsYkWmMiguvPLWRhQqqpoDoMq0KczLx2/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <span class="resource-type">Deck</span>
+                <span class="resource-title">Absolutely Essential AI Deck</span>
+                <span class="resource-desc">The visual presentation used to navigate the essential AI concepts.</span>
+                <span class="resource-arrow">Open Deck ↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="resource-card">
-          <div class="resource-card-header">
-            <div class="resource-label">Core Document 02</div>
-            <h3>Course Handbook</h3>
-            <p>
-              The handbook supports implementation, review, navigation, and applied use. It helps participants move from conceptual understanding to governed workflows and practical institutional exploration.
-            </p>
+        <article class="pillar-card" id="pillar-2">
+          <div class="pillar-head">
+            <div class="pillar-number">2</div>
+            <div>
+              <h3>Framework for Institutional Implementation: Governance-First</h3>
+              <p>
+                The institutional implementation layer. AI is treated not as a chatbot exercise but as a corporate production process requiring governance, architecture, control, and accountability.
+              </p>
+            </div>
           </div>
-          <div class="resource-links">
-            <a class="resource-link" href="https://drive.google.com/file/d/1qDI9AcrjNOAcT8hFyvcwjrDxthq9CuXz/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>Open Handbook</span><span>↗</span></a>
+          <div class="pillar-body">
+            <div class="resource-row">
+              <a class="resource-button" href="https://drive.google.com/file/d/1gq3Mjw63NCgbXsfMGI5fgbWAjBUMSuJf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <span class="resource-type">Book</span>
+                <span class="resource-title">Framework for Institutional Implementation</span>
+                <span class="resource-desc">The governance-first book for understanding AI as institutional capability, not isolated automation.</span>
+                <span class="resource-arrow">Open Book ↗</span>
+              </a>
+              <a class="resource-button" href="https://docs.google.com/presentation/d/1cF3F_OQEYm3b6XAmeCPy8n8N2kuy-wDl4DmJXVlSqNE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <span class="resource-type">Deck</span>
+                <span class="resource-title">Governance-First Implementation Deck</span>
+                <span class="resource-desc">The visual framework for institutional AI implementation, governance, and operating models.</span>
+                <span class="resource-arrow">Open Deck ↗</span>
+              </a>
+              <div class="resource-button" aria-label="No separate notebooks specified for Pillar 2">
+                <span class="resource-type">Colab Notebooks</span>
+                <span class="resource-title">Not separately specified</span>
+                <span class="resource-desc">No Pillar 2 notebook link was specified. This pillar is represented by the book and deck listed above.</span>
+                <span class="resource-arrow">Governance Resource Layer</span>
+              </div>
+            </div>
           </div>
         </article>
 
-        <article class="resource-card">
-          <div class="resource-card-header">
-            <div class="resource-label">Core Document 03</div>
-            <h3>Course Deck</h3>
-            <p>
-              The deck provides the visual map of the Summer Course. It compresses the three-pillar structure and helps participants understand the sequence from literacy to governance to implementation.
-            </p>
+        <article class="pillar-card" id="pillar-3">
+          <div class="pillar-head">
+            <div class="pillar-number">3</div>
+            <div>
+              <h3>Institutional Implementation in Five Financial Domains</h3>
+              <p>
+                The applied implementation layer. This pillar goes domain by domain across the financial sector to study practical AI use cases, workflows, notebooks, and professional implementation.
+              </p>
+            </div>
           </div>
-          <div class="resource-links">
-            <a class="resource-link" href="https://drive.google.com/file/d/1Iv9B5rjfhzSTRz_yzm4EwmInbKFG1fOH/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>Open Deck</span><span>↗</span></a>
+          <div class="pillar-body">
+            <div class="domain-grid">
+              <article class="domain-card">
+                <div class="domain-index">Domain 1</div>
+                <h4>Corporate Law</h4>
+                <p>AI implementation for corporate legal workflows, legal analysis, document review, governance, and institutional legal support.</p>
+                <div class="domain-links">
+                  <a href="https://github.com/alexdibol/ai-law/blob/main/books/BOOK%20AI_LAW.pdf" target="_blank" rel="noopener noreferrer"><span>Book</span><span>↗</span></a>
+                  <a href="https://github.com/alexdibol/ai-law/tree/main/notebooks" target="_blank" rel="noopener noreferrer"><span>Colab Notebooks</span><span>↗</span></a>
+                </div>
+              </article>
+
+              <article class="domain-card">
+                <div class="domain-index">Domain 2</div>
+                <h4>Accounting and Audit</h4>
+                <p>AI implementation for accounting, audit workflows, verification, controls, reporting, and structured review.</p>
+                <div class="domain-links">
+                  <a href="https://github.com/alexdibol/ai-accounting/blob/main/book/AI%20ACCOUNTING%20BOOK.pdf" target="_blank" rel="noopener noreferrer"><span>Book</span><span>↗</span></a>
+                  <a href="https://github.com/alexdibol/ai-accounting/tree/main/notebooks" target="_blank" rel="noopener noreferrer"><span>Colab Notebooks</span><span>↗</span></a>
+                </div>
+              </article>
+
+              <article class="domain-card">
+                <div class="domain-index">Domain 3</div>
+                <h4>Financial Advice</h4>
+                <p>AI implementation for financial advisory processes, client support, planning workflows, analysis, and explainable recommendations.</p>
+                <div class="domain-links">
+                  <a href="https://github.com/alexdibol/ai-financial_advisors/blob/main/book/AI%20FINANCIAL%20ADVISOR%20BOOK.pdf" target="_blank" rel="noopener noreferrer"><span>Book</span><span>↗</span></a>
+                  <a href="https://github.com/alexdibol/ai-financial_advisors/tree/main/NOTEBOOKS" target="_blank" rel="noopener noreferrer"><span>Colab Notebooks</span><span>↗</span></a>
+                </div>
+              </article>
+
+              <article class="domain-card">
+                <div class="domain-index">Domain 4</div>
+                <h4>Consulting</h4>
+                <p>AI implementation for consulting workflows, diagnosis, structured problem solving, strategic analysis, and client-ready outputs.</p>
+                <div class="domain-links">
+                  <a href="https://github.com/alexdibol/ai-consulting/blob/main/book/AI%20CONSULTING.pdf" target="_blank" rel="noopener noreferrer"><span>Book</span><span>↗</span></a>
+                  <a href="https://github.com/alexdibol/ai-consulting/tree/main/NOTEBOOKS" target="_blank" rel="noopener noreferrer"><span>Colab Notebooks</span><span>↗</span></a>
+                </div>
+              </article>
+
+              <article class="domain-card">
+                <div class="domain-index">Domain 5</div>
+                <h4>Investment Banking</h4>
+                <p>AI implementation for investment banking workflows, transaction analysis, financial documents, due diligence, and execution support.</p>
+                <div class="domain-links">
+                  <a href="https://github.com/alexdibol/ai-investment_banking/blob/main/book/AI%20INVESTMENT%20BANKING%20BOOK.pdf" target="_blank" rel="noopener noreferrer"><span>Book</span><span>↗</span></a>
+                  <a href="https://github.com/alexdibol/ai-investment_banking/tree/main/notebooks" target="_blank" rel="noopener noreferrer"><span>Colab Notebooks</span><span>↗</span></a>
+                </div>
+              </article>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
     <section class="page" id="access">
-      <div class="access-strip">
+      <div class="callout">
         <div>
-          <h2>Begin with the three-pillar map</h2>
+          <h2>Understand. Govern. Implement.</h2>
           <p>
-            The Summer Course prepares participants for the complete journey of institutional AI adoption. Start with the core documents, then move through the three pillars: understand the foundations, govern AI as a corporate process, and implement AI domain by domain within the financial sector.
+            The Summer Course is designed to prepare leaders for institutional AI adoption. The learning path begins with the absolute essentials, moves into governance-first implementation, and concludes with practical domain-by-domain financial applications.
           </p>
         </div>
-        <div class="access-buttons">
-          <a href="https://drive.google.com/file/d/1gq3Mjw63NCgbXsfMGI5fgbWAjBUMSuJf/view?usp=sharing" target="_blank" rel="noopener noreferrer">Book</a>
-          <a href="https://drive.google.com/file/d/1qDI9AcrjNOAcT8hFyvcwjrDxthq9CuXz/view?usp=sharing" target="_blank" rel="noopener noreferrer">Handbook</a>
-          <a href="https://drive.google.com/file/d/1Iv9B5rjfhzSTRz_yzm4EwmInbKFG1fOH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Deck</a>
+        <div class="callout-buttons">
+          <a href="#pillar-1">Pillar 1</a>
+          <a href="#pillar-2">Pillar 2</a>
+          <a href="#pillar-3">Pillar 3</a>
         </div>
       </div>
     </section>
@@ -501,11 +821,11 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <strong>AI Summer Course for Financial Leaders</strong><br />
-        Understand AI · Govern AI · Implement AI in Finance
+        <strong>AI Summer Course</strong><br />
+        Three Pillars for Institutional Implementation in Finance
       </div>
       <div>
-        Prepared as a landing page for the Summer Course and easy access to core documents.
+        Prepared as a GitHub Pages landing page for course presentation and resource access.
       </div>
     </div>
   </footer>
