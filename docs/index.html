@@ -354,10 +354,11 @@
     }
 
     .pathway-card {
-      position: relative;
-      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
       padding: 25px;
-      overflow: hidden;
+      overflow: visible;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--paper);
@@ -387,21 +388,22 @@
     }
 
     .pathway-card p {
+      margin-bottom: 18px;
       color: var(--muted);
       font-size: 0.96rem;
+      line-height: 1.5;
     }
 
     .pathway-result {
-      position: absolute;
-      right: 18px;
-      bottom: 18px;
-      left: 18px;
-      padding-top: 12px;
+      position: static;
+      margin-top: auto;
+      padding-top: 13px;
       border-top: 1px solid var(--line);
       color: var(--blue);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.8rem;
       font-weight: 800;
+      line-height: 1.35;
       letter-spacing: 0.02em;
     }
 
@@ -1097,10 +1099,6 @@
   </header>
 
   <main>
-
-    <!-- =======================================================
-         HERO
-         ======================================================= -->
     <section class="hero page" id="course">
       <div class="hero-grid">
         <div>
@@ -1158,9 +1156,6 @@
       </div>
     </section>
 
-    <!-- =======================================================
-         EXECUTIVE PROMISE
-         ======================================================= -->
     <section class="page" id="promise">
       <div class="executive-promise">
         <div>
@@ -1184,9 +1179,6 @@
       </div>
     </section>
 
-    <!-- =======================================================
-         LEARNING PATH
-         ======================================================= -->
     <section class="page" id="pathway">
       <div class="section-header">
         <div class="section-kicker">Leadership Learning Path</div>
@@ -1212,7 +1204,7 @@
             not technical specialization.
           </p>
 
-          <div class="pathway-result">Outcome: informed executive AI literacy</div>
+          <div class="pathway-result">Outcome: executive AI literacy</div>
         </article>
 
         <article class="pathway-card">
@@ -1226,7 +1218,7 @@
             agentic reviewability, and institutional accountability.
           </p>
 
-          <div class="pathway-result">Outcome: governance-first institutional readiness</div>
+          <div class="pathway-result">Outcome: governance-first readiness</div>
         </article>
 
         <article class="pathway-card">
@@ -1240,14 +1232,11 @@
             and accountable innovation at institutional scale.
           </p>
 
-          <div class="pathway-result">Outcome: responsible implementation capability</div>
+          <div class="pathway-result">Outcome: accountable implementation capability</div>
         </article>
       </div>
     </section>
 
-    <!-- =======================================================
-         COURSE RESOURCES
-         ======================================================= -->
     <section class="page" id="resources">
       <div class="section-header">
         <div class="section-kicker">Course Resources</div>
@@ -1262,10 +1251,6 @@
       </div>
 
       <div class="pillar-stack">
-
-        <!-- =====================================================
-             PILLAR 1
-             ===================================================== -->
         <article class="pillar-card" id="pillar-1">
           <div class="pillar-head">
             <div class="pillar-number">1</div>
@@ -1369,9 +1354,6 @@
           </div>
         </article>
 
-        <!-- =====================================================
-             PILLAR 2
-             ===================================================== -->
         <article class="pillar-card" id="pillar-2">
           <div class="pillar-head">
             <div class="pillar-number">2</div>
@@ -1541,9 +1523,6 @@
           </div>
         </article>
 
-        <!-- =====================================================
-             PILLAR 3
-             ===================================================== -->
         <article class="pillar-card" id="pillar-3">
           <div class="pillar-head">
             <div class="pillar-number">3</div>
@@ -1558,10 +1537,6 @@
           </div>
 
           <div class="pillar-body">
-
-            <!-- =================================================
-                 MATURITY LADDER OVERVIEW
-                 ================================================= -->
             <section class="maturity-overview" id="maturity-ladder">
               <div class="maturity-badge">Pillar 3 Overview</div>
 
@@ -1584,9 +1559,7 @@
               <div class="maturity-grid">
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 1</span>
-
                   <h4>Informal Prompting</h4>
-
                   <p>
                     Individuals use stand-alone AI interactions to draft, summarize, analyze, or explore.
                     Results may appear persuasive, but they remain difficult to verify, reproduce, defend, or audit.
@@ -1595,9 +1568,7 @@
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 2</span>
-
                   <h4>Structured AI Interaction</h4>
-
                   <p>
                     Inputs and outputs are standardized; sensitive information is protected;
                     interactions are logged; and each draft is supported by explicit assumptions,
@@ -1607,9 +1578,7 @@
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 3</span>
-
                   <h4>Governed Reasoning</h4>
-
                   <p>
                     AI becomes part of an analytical scaffold that separates facts from assumptions,
                     identifies unanswered questions, makes uncertainty visible,
@@ -1619,9 +1588,7 @@
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 4</span>
-
                   <h4>Governed Workflows &amp; Reusable Assets</h4>
-
                   <p>
                     Defined roles, approvals, drafting, red-teaming, review, and release processes
                     are combined with reusable playbooks, clause banks, decision trees,
@@ -1631,9 +1598,7 @@
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 5</span>
-
                   <h4>Institutional AI Operating System</h4>
-
                   <p>
                     Requests, analyses, approvals, exceptions, and decisions move through defined states,
                     gates, records, and supervisory layers. Institutional memory persists,
@@ -1684,9 +1649,6 @@
               </div>
             </section>
 
-            <!-- =================================================
-                 COMPONENT 3A
-                 ================================================= -->
             <div class="subpillar">
               <div class="section-kicker">Component 3A</div>
 
@@ -1798,9 +1760,6 @@
 
             <hr class="subpillar-divider" />
 
-            <!-- =================================================
-                 COMPONENT 3B
-                 ================================================= -->
             <div class="subpillar">
               <div class="section-kicker">Component 3B</div>
 
@@ -1957,9 +1916,6 @@
       </div>
     </section>
 
-    <!-- =======================================================
-         FINAL CALLOUT
-         ======================================================= -->
     <section class="page" id="access">
       <div class="callout">
         <div>
