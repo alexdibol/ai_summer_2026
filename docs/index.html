@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,7 @@
       --gold: #b48a2c;
       --gold-soft: #fff7e3;
       --green: #32734c;
+      --green-soft: #edf8f0;
       --shadow: 0 18px 45px rgba(0, 35, 70, 0.12);
       --radius: 22px;
       --radius-sm: 16px;
@@ -78,7 +80,7 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
-      min-width: 210px;
+      min-width: 220px;
     }
 
     .brand strong {
@@ -101,7 +103,7 @@
       gap: 5px;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.73rem;
+      font-size: 0.72rem;
     }
 
     .nav a {
@@ -125,7 +127,7 @@
     }
 
     .hero {
-      padding: 78px 0 50px;
+      padding: 78px 0 52px;
     }
 
     .hero-grid {
@@ -161,7 +163,7 @@
     }
 
     h1 {
-      max-width: 810px;
+      max-width: 850px;
       margin-bottom: 24px;
       color: var(--blue);
       font-size: clamp(2.6rem, 5.3vw, 5.3rem);
@@ -170,7 +172,7 @@
     }
 
     .hero-lead {
-      max-width: 800px;
+      max-width: 825px;
       margin-bottom: 18px;
       color: #334458;
       font-size: 1.25rem;
@@ -178,7 +180,7 @@
     }
 
     .hero-copy {
-      max-width: 790px;
+      max-width: 800px;
       margin-bottom: 24px;
       color: var(--muted);
       font-size: 1.04rem;
@@ -283,7 +285,7 @@
        ========================================================= */
 
     .section-header {
-      max-width: 930px;
+      max-width: 950px;
       margin-bottom: 28px;
     }
 
@@ -335,9 +337,9 @@
       border-radius: var(--radius-sm);
       background: var(--blue);
       color: white;
-      font-size: 1.24rem;
+      font-size: 1.22rem;
       font-style: italic;
-      line-height: 1.45;
+      line-height: 1.46;
       box-shadow: 0 12px 24px rgba(0, 60, 113, 0.18);
     }
 
@@ -353,7 +355,7 @@
 
     .pathway-card {
       position: relative;
-      min-height: 250px;
+      min-height: 260px;
       padding: 25px;
       overflow: hidden;
       border: 1px solid var(--line);
@@ -404,7 +406,7 @@
     }
 
     /* =========================================================
-       PILLAR CARDS AND RESOURCE CARDS
+       PILLARS AND RESOURCE CARDS
        ========================================================= */
 
     .pillar-stack {
@@ -468,7 +470,8 @@
       gap: 14px;
     }
 
-    .resource-button {
+    .resource-button,
+    .maturity-resource {
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -480,7 +483,8 @@
       transition: all 0.18s ease;
     }
 
-    a.resource-button:hover {
+    a.resource-button:hover,
+    a.maturity-resource:hover {
       transform: translateY(-2px);
       border-color: #b9d0e4;
       background: #fbfdff;
@@ -625,7 +629,7 @@
     .feature-card {
       display: flex;
       flex-direction: column;
-      min-height: 330px;
+      min-height: 335px;
       padding: 21px;
       border: 1px solid #bdd2e5;
       border-radius: 20px;
@@ -700,7 +704,7 @@
       padding: 30px;
       border: 1px solid #c2d9c9;
       border-radius: var(--radius);
-      background: linear-gradient(135deg, #edf8f0 0%, #ffffff 68%);
+      background: linear-gradient(135deg, var(--green-soft) 0%, #ffffff 68%);
       box-shadow: 0 12px 30px rgba(41, 111, 70, 0.08);
     }
 
@@ -760,7 +764,7 @@
     .maturity-level {
       display: flex;
       flex-direction: column;
-      min-height: 235px;
+      min-height: 242px;
       padding: 17px;
       border: 1px solid #c9dfd0;
       border-radius: 18px;
@@ -798,20 +802,7 @@
     }
 
     .maturity-resource {
-      display: flex;
-      flex-direction: column;
-      min-height: 142px;
-      padding: 18px;
-      border: 1px solid #c9dfd0;
-      border-radius: 18px;
-      background: white;
-      transition: all 0.18s ease;
-    }
-
-    a.maturity-resource:hover {
-      transform: translateY(-2px);
-      background: #fbfffc;
-      box-shadow: 0 12px 24px rgba(41, 111, 70, 0.08);
+      border-color: #c9dfd0;
     }
 
     .maturity-resource .resource-type {
@@ -860,7 +851,7 @@
     .domain-card {
       display: flex;
       flex-direction: column;
-      min-height: 265px;
+      min-height: 270px;
       padding: 18px;
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -921,7 +912,7 @@
     }
 
     /* =========================================================
-       FINAL CALLOUT / FOOTER
+       FINAL CALLOUT AND FOOTER
        ========================================================= */
 
     .callout {
@@ -1106,6 +1097,7 @@
   </header>
 
   <main>
+
     <!-- =======================================================
          HERO
          ======================================================= -->
@@ -1114,48 +1106,52 @@
         <div>
           <div class="eyebrow">AI · Governance · Financial Institutions</div>
 
-          <h1>From AI Understanding to Responsible Institutional Deployment</h1>
+          <h1>Preparing Leaders to Direct Responsible AI Transformation</h1>
 
           <p class="hero-lead">
-            This is not a course asking leaders to become programmers.
-            It is a course preparing them to understand, govern, and deploy artificial intelligence responsibly in real institutions.
+            This is not a course asking senior leaders and professionals to become programmers.
+            It is a rigorous learning pathway for those responsible for understanding, governing,
+            and leading the institutional adoption of artificial intelligence.
           </p>
 
           <p class="hero-copy">
-            The AI Summer Course provides a complete pathway for financial professionals, corporate leaders,
-            startup leaders, and institutional decision-makers. It begins with the foundations of modern AI,
-            advances into governance-first system design, and culminates in applied implementation and scientific discovery across financial domains.
+            The AI Summer Course equips decision-makers with the intellectual foundations, governance principles,
+            and practical frameworks required to guide AI transformation responsibly. It moves from understanding
+            how modern AI works, to designing institutions that can govern it, to applying it across professional
+            financial environments where accountability, trust, and judgment are non-negotiable.
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#pathway">Explore the Learning Path</a>
+            <a class="button primary" href="#pathway">Explore the Leadership Pathway</a>
             <a class="button secondary" href="#maturity-ladder">Explore the Maturity Ladder</a>
           </div>
         </div>
 
         <aside class="hero-panel" aria-label="Course orientation">
-          <div class="panel-kicker">Executive Orientation</div>
-          <h2>AI is not merely a tool. It is institutional infrastructure.</h2>
+          <div class="panel-kicker">For Institutional Leaders</div>
+
+          <h2>AI is becoming institutional infrastructure.</h2>
 
           <p>
-            Effective adoption requires more than access to capable models. It requires informed leadership,
-            designed boundaries, auditable workflows, human judgment, and the ability to connect AI to genuine business and professional value.
+            The question is no longer whether organizations will use AI. The question is whether
+            their leaders can shape its use with discipline, responsibility, professional judgment,
+            and a clear understanding of how intelligent systems affect decisions, risks, and accountability.
           </p>
 
           <div class="orientation-list">
             <div class="orientation-item">
-              <strong>Understand the machinery.</strong><br />
-              Learn what modern AI is doing beneath the interface.
+              <strong>Understand intelligence.</strong><br />
+              Learn what modern AI can do, how it operates, and where its apparent confidence can mislead.
             </div>
 
             <div class="orientation-item">
-              <strong>Govern the machinery.</strong><br />
-              Design AI systems that are bounded, inspectable, reviewable, and accountable.
+              <strong>Govern intelligence.</strong><br />
+              Build systems that are bounded, inspectable, reviewable, and aligned with institutional responsibilities.
             </div>
 
             <div class="orientation-item">
-              <strong>Apply the machinery.</strong><br />
-              Translate the foundations into real financial workflows, research, and discovery.
+              <strong>Lead implementation.</strong><br />
+              Translate AI capability into trusted workflows, professional value, and durable institutional capacity.
             </div>
           </div>
         </aside>
@@ -1169,18 +1165,21 @@
       <div class="executive-promise">
         <div>
           <div class="section-kicker">Why This Course</div>
-          <h2>Beyond chatbots, prompts, and isolated experiments</h2>
+
+          <h2>Beyond tools, demonstrations, and isolated experimentation</h2>
+
           <p>
-            Many AI programs emphasize what a model can produce. This course focuses on what leaders must understand
-            before an institution can responsibly rely on that production. Participants learn how AI models work,
-            how systems must be architected and governed, and how AI can be deployed in domains where judgment,
-            accountability, and professional standards matter.
+            Most AI education focuses on what a model can produce. This course focuses on what leaders must know
+            before an institution can responsibly rely on that production. It prepares participants to assess AI capability,
+            identify governance requirements, establish responsible boundaries, and lead implementation in environments
+            where decisions must be explained, defended, and trusted.
           </p>
         </div>
 
         <div class="promise-statement">
-          “The objective is not to automate judgment away. The objective is to build institutions that can use AI
-          to extend human judgment, innovation, and responsible decision-making.”
+          “The purpose of institutional AI is not to remove human judgment.
+          It is to extend human capability while preserving responsibility,
+          professional standards, and the integrity of decision-making.”
         </div>
       </div>
     </section>
@@ -1190,43 +1189,58 @@
          ======================================================= -->
     <section class="page" id="pathway">
       <div class="section-header">
-        <div class="section-kicker">Learning Path</div>
-        <h2 class="section-title">A structured progression for institutional AI leadership</h2>
+        <div class="section-kicker">Leadership Learning Path</div>
+
+        <h2 class="section-title">A pedagogical progression for responsible institutional transformation</h2>
+
         <p class="section-copy">
-          The course moves in a deliberate sequence. Each pillar answers a different leadership question:
-          What is AI? How do we govern it? Where and how can it create responsible value?
+          The course is deliberately structured for high-responsibility roles. It starts by building confident AI literacy,
+          progresses into governance and institutional design, and culminates in practical implementation and discovery
+          across domains where professional judgment and institutional accountability matter.
         </p>
       </div>
 
       <div class="pathway-grid">
         <article class="pathway-card">
           <div class="pathway-number">1</div>
+
           <h3>Understand</h3>
+
           <p>
-            Establish a confident conceptual foundation in AI and machine learning:
-            regression, neural networks, embeddings, attention, large language models, reasoning, and agentic systems.
+            Build an informed mental model of modern AI: regression, neural networks, embeddings, attention,
+            large language models, reasoning systems, and agentic architectures. The objective is confidence,
+            not technical specialization.
           </p>
-          <div class="pathway-result">Outcome: informed AI literacy</div>
+
+          <div class="pathway-result">Outcome: informed executive AI literacy</div>
         </article>
 
         <article class="pathway-card">
           <div class="pathway-number">2</div>
+
           <h3>Govern</h3>
+
           <p>
-            Treat AI as a production capability. Study architectural governance, prompt specifications,
-            controlled workflows, validation, escalation, agentic reviewability, and institutional accountability.
+            Treat AI as a production capability that must be designed, controlled, reviewed, and escalated.
+            Study architectural governance, prompt specifications, controlled workflows, validation,
+            agentic reviewability, and institutional accountability.
           </p>
-          <div class="pathway-result">Outcome: governance-first readiness</div>
+
+          <div class="pathway-result">Outcome: governance-first institutional readiness</div>
         </article>
 
         <article class="pathway-card">
           <div class="pathway-number">3</div>
+
           <h3>Implement &amp; Discover</h3>
+
           <p>
-            Apply AI under governance across professional financial domains, then advance toward AI4S:
-            agent-governed scientific discovery, testing, review, and innovation.
+            Apply governed AI across financial and professional domains, then move toward AI4S:
+            agent-governed discovery, deterministic testing, professional review,
+            and accountable innovation at institutional scale.
           </p>
-          <div class="pathway-result">Outcome: practical institutional capability</div>
+
+          <div class="pathway-result">Outcome: responsible implementation capability</div>
         </article>
       </div>
     </section>
@@ -1237,10 +1251,13 @@
     <section class="page" id="resources">
       <div class="section-header">
         <div class="section-kicker">Course Resources</div>
-        <h2 class="section-title">A connected learning environment</h2>
+
+        <h2 class="section-title">A connected learning environment for institutional leadership</h2>
+
         <p class="section-copy">
-          Each pillar combines reading, visual explanation, and practical implementation. Feature Presentations extend the core curriculum
-          into focused areas of debate and research: accessible in form, rigorous in substance, and free from unnecessary mathematical burden.
+          Each pillar combines rigorous reading, visual explanation, practical frameworks, and executable examples.
+          Feature Presentations extend the main curriculum into focused areas of research, debate, and institutional practice:
+          accessible in form, formal in substance, and designed for leaders who must guide change without becoming technical specialists.
         </p>
       </div>
 
@@ -1256,7 +1273,8 @@
             <div>
               <h3>Absolutely Essential AI</h3>
               <p>
-                The foundational layer: enough conceptual depth to understand AI with confidence, rather than simply using it as a black box.
+                The intellectual foundation for professionals who need to understand AI with confidence,
+                question it intelligently, and avoid treating powerful systems as unexplained black boxes.
               </p>
             </div>
           </div>
@@ -1270,7 +1288,8 @@
                 <span class="resource-type">Core Book</span>
                 <span class="resource-title">Absolutely Essential AI and ML</span>
                 <span class="resource-desc">
-                  The conceptual foundation for understanding artificial intelligence and machine learning.
+                  A rigorous and accessible foundation for understanding artificial intelligence, machine learning,
+                  and the concepts that shape contemporary systems.
                 </span>
                 <span class="resource-arrow">Open Book ↗</span>
               </a>
@@ -1282,7 +1301,7 @@
                 <span class="resource-type">Core Deck</span>
                 <span class="resource-title">Absolutely Essential AI Deck</span>
                 <span class="resource-desc">
-                  A visual overview of the ideas, vocabulary, and conceptual architecture of modern AI.
+                  A visual guide to the vocabulary, architecture, and conceptual evolution of modern artificial intelligence.
                 </span>
                 <span class="resource-arrow">Open Deck ↗</span>
               </a>
@@ -1294,7 +1313,7 @@
                 <span class="resource-type">Hands-On Layer</span>
                 <span class="resource-title">AI Essentials Notebooks</span>
                 <span class="resource-desc">
-                  Executable examples that turn foundational concepts into practical intuition.
+                  Executable examples that translate abstract ideas into practical intuition without losing conceptual rigor.
                 </span>
                 <span class="resource-arrow">Open Notebooks ↗</span>
               </a>
@@ -1306,13 +1325,14 @@
               <h3>A Pedagogical Journey Inside the Mind of AI</h3>
 
               <p class="feature-summary">
-                An accessible guide connecting familiar ideas from regression and econometrics with neural networks,
-                embeddings, attention, large language models, reasoning, and multi-agent systems.
+                A formal but accessible exploration of how modern AI develops from familiar statistical ideas
+                into neural networks, embeddings, attention, language models, reasoning systems, and multi-agent structures.
               </p>
 
               <div class="feature-context">
-                A formal but non-technical journey through the internal logic of modern AI:
-                from nonlinear regression to systems that can represent context, generate language, reason, verify, and collaborate.
+                Designed for leaders and professionals who want to understand the internal logic of AI without
+                unnecessary mathematical burden. The emphasis is on conceptual clarity, geometric intuition,
+                and the ability to participate intelligently in high-level institutional discussions.
               </div>
 
               <div class="feature-resource-row">
@@ -1323,7 +1343,7 @@
                   <span class="resource-type">Feature Paper</span>
                   <span class="resource-title">Inside the Mind of AI</span>
                   <span class="resource-desc">
-                    A compact pedagogical guide to the inner progression of contemporary AI systems.
+                    A pedagogical guide to the internal progression of contemporary intelligent systems.
                   </span>
                   <span class="resource-arrow">Open Paper ↗</span>
                 </a>
@@ -1335,14 +1355,15 @@
                   <span class="resource-type">Feature Deck</span>
                   <span class="resource-title">Inside the Mind of AI</span>
                   <span class="resource-desc">
-                    A visual journey from regression to neural networks, language models, and reasoning systems.
+                    A visual journey from regression to neural networks, language models, and reasoning architectures.
                   </span>
                   <span class="resource-arrow">Open Deck ↗</span>
                 </a>
               </div>
 
               <p class="feature-reading-note">
-                Feature Presentations enrich the main curriculum through focused, accessible readings and visual explanations.
+                Feature Presentations broaden the intellectual horizon of the course:
+                they are designed to make sophisticated issues accessible to the leaders who must shape institutional AI strategy.
               </p>
             </section>
           </div>
@@ -1358,8 +1379,8 @@
             <div>
               <h3>Framework for Institutional Implementation: Governance-First</h3>
               <p>
-                The institutional layer: AI as an engineered production process requiring architecture, controls,
-                auditability, escalation, governance, and accountability.
+                The institutional layer: AI as an engineered operating capability requiring architecture,
+                controls, review, escalation, accountability, and clear human responsibility.
               </p>
             </div>
           </div>
@@ -1373,7 +1394,8 @@
                 <span class="resource-type">Core Book</span>
                 <span class="resource-title">Framework for Institutional Implementation</span>
                 <span class="resource-desc">
-                  A governance-first framework for treating AI as institutional capability rather than isolated automation.
+                  A governance-first framework for leaders responsible for turning AI capability into a controlled,
+                  accountable, and durable institutional asset.
                 </span>
                 <span class="resource-arrow">Open Book ↗</span>
               </a>
@@ -1385,7 +1407,8 @@
                 <span class="resource-type">Core Deck</span>
                 <span class="resource-title">Governance-First Implementation Deck</span>
                 <span class="resource-desc">
-                  A visual framework for operating models, controls, governance, and institutional deployment.
+                  A visual framework for operating models, institutional controls, governance structures,
+                  and responsible AI deployment.
                 </span>
                 <span class="resource-arrow">Open Deck ↗</span>
               </a>
@@ -1394,7 +1417,8 @@
                 <span class="resource-type">Hands-On Layer</span>
                 <span class="resource-title">Implementation Examples</span>
                 <span class="resource-desc">
-                  Practical exercises that develop intuition about AI as a bounded and auditable institutional process.
+                  Practical examples that build intuition about AI as a bounded, inspectable,
+                  and auditable institutional process.
                 </span>
                 <span class="resource-arrow">Governed Learning Layer</span>
               </div>
@@ -1402,26 +1426,31 @@
 
             <section class="feature-introduction" id="pillar-2-features">
               <h3>Feature Presentations: Three Foundations of Governed AI</h3>
+
               <p>
-                These specialized spin-offs extend Pillar 2 through three complementary perspectives:
-                the architecture of AI systems, the prompt layer as a formal specification discipline,
-                and agentic workflows designed for reviewability and committee-level accountability.
+                These specialized presentations extend Pillar 2 through three complementary questions
+                that senior leaders must be able to ask: How is the AI apparatus architected?
+                How are instructions formalized and controlled? How can agentic workflows remain reviewable,
+                bounded, and institutionally accountable?
               </p>
             </section>
 
             <div class="feature-grid">
               <article class="feature-card" id="feature-architectural-governance">
                 <div class="feature-label">Feature 1 · Pillar 2</div>
+
                 <h3>AI Architectural Governance</h3>
 
                 <p>
-                  An AI system is not merely an LLM. It is an engineered apparatus of model intelligence,
-                  deterministic software, tools, workflows, policy layers, validation mechanisms, and human oversight.
+                  An AI system is not simply a language model. It is an engineered apparatus:
+                  model intelligence, deterministic software, tools, workflows, policy layers,
+                  validation mechanisms, audit trails, and human oversight.
                 </p>
 
                 <div class="feature-focus">
-                  <strong>Focus:</strong> Pre-institutional governance. Architecture defines the operational boundaries
-                  within which AI may function before regulatory or organizational control layers are introduced.
+                  <strong>Leadership focus:</strong> Pre-institutional governance.
+                  Institutional responsibility begins at system design, where architecture determines
+                  the operational boundaries within which AI is permitted to function.
                 </div>
 
                 <div class="feature-links">
@@ -1441,16 +1470,19 @@
 
               <article class="feature-card" id="feature-prompt-engineering">
                 <div class="feature-label">Feature 2 · Pillar 2</div>
+
                 <h3>Prompt Engineering Under Governance</h3>
 
                 <p>
                   Prompting is not a search for magical wording. It is the discipline of specifying objectives,
-                  evidence boundaries, constraints, output contracts, refusal rules, termination, and escalation.
+                  evidence boundaries, constraints, output contracts, refusal rules, termination conditions,
+                  and escalation to human review.
                 </p>
 
                 <div class="feature-focus">
-                  <strong>Focus:</strong> Prompts as governed specifications. Reliable AI requires schema-first outputs,
-                  versioning, validation, multi-pass review, and regression-safe promotion.
+                  <strong>Leadership focus:</strong> Prompts as governed specifications.
+                  Reliable AI requires structure, versioning, validation, regression-safe improvement,
+                  and outputs that can be reviewed rather than merely admired.
                 </div>
 
                 <div class="feature-links">
@@ -1470,16 +1502,19 @@
 
               <article class="feature-card" id="feature-agentic-structures">
                 <div class="feature-label">Feature 3 · Pillar 2</div>
+
                 <h3>Agentic Structures Under Governance</h3>
 
                 <p>
                   A governance-first handbook for agentic workflows operating under real accountability,
-                  regulatory exposure, reputational risk, and senior-management or committee review.
+                  regulatory exposure, reputational risk, and the scrutiny of senior management,
+                  risk committees, and boards.
                 </p>
 
                 <div class="feature-focus">
-                  <strong>Focus:</strong> Reviewability. Governed agents distinguish facts from assumptions,
-                  route decisions through explicit gates, fail safely, preserve artifacts, and show their work.
+                  <strong>Leadership focus:</strong> Reviewability.
+                  Governed agents must distinguish facts from assumptions, operate through explicit gates,
+                  fail safely, preserve institutional records, and make their reasoning visible.
                 </div>
 
                 <div class="feature-links">
@@ -1499,8 +1534,9 @@
             </div>
 
             <p class="feature-reading-note">
-              Together, these presentations deepen the governance discussion without assuming specialized programming,
-              mathematical formalism, or prior experience building AI systems.
+              Together, these presentations deepen the governance discussion for professionals responsible
+              for leading institutional change, without assuming specialized programming, advanced mathematics,
+              or prior experience building AI systems.
             </p>
           </div>
         </article>
@@ -1515,8 +1551,8 @@
             <div>
               <h3>Financial Domain Implementation and AI4S Discovery</h3>
               <p>
-                The applied layer: governed implementation in professional domains, followed by AI4S architectures
-                for scientific discovery, stress testing, review, and innovation.
+                The applied leadership layer: governed AI implementation in professional domains,
+                followed by AI4S architectures for disciplined discovery, testing, review, and innovation.
               </p>
             </div>
           </div>
@@ -1532,61 +1568,76 @@
               <h3>The Five-Level Maturity Ladder of AI Institutional Implementation</h3>
 
               <p>
-                The maturity ladder is a roadmap for moving from isolated, informal interactions with generative AI
-                toward a fully governed institutional operating system. Maturity is not measured by how many prompts
-                an organization can generate or how sophisticated its models appear. It is measured by the degree to
-                which intelligence is governed, reasoning is inspectable, workflows are accountable, assets are reusable,
-                and consequential decisions can be trusted at institutional scale.
+                The maturity ladder is a practical roadmap for leaders moving their organizations
+                from isolated and informal interactions with generative AI toward a governed institutional operating system.
+                It provides a language for assessing current capability, identifying control gaps,
+                sequencing investment, and establishing a credible path toward trusted AI at scale.
               </p>
 
               <div class="maturity-principle">
-                Plain prompting may produce persuasive answers, but institutional capability begins only when information,
-                reasoning, approvals, evidence, controls, exceptions, and decisions operate inside defined and auditable structures.
+                Institutional AI maturity is not measured by the number of prompts an organization can generate,
+                nor by the apparent sophistication of its models. It is measured by how effectively intelligence is governed,
+                reasoning is inspectable, workflows are accountable, institutional assets are reusable,
+                and consequential decisions can be trusted.
               </div>
 
               <div class="maturity-grid">
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 1</span>
+
                   <h4>Informal Prompting</h4>
+
                   <p>
-                    Stand-alone interactions may generate useful drafts and impressive answers, but outputs are difficult
-                    to verify, reproduce, defend, or audit.
+                    Individuals use stand-alone AI interactions to draft, summarize, analyze, or explore.
+                    Results may appear persuasive, but they remain difficult to verify, reproduce, defend, or audit.
                   </p>
                 </article>
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 2</span>
+
                   <h4>Structured AI Interaction</h4>
+
                   <p>
-                    Sensitive information is protected; inputs and outputs are standardized; interactions are logged;
-                    and drafts carry explicit assumptions, evidence, risks, and verification requirements.
+                    Inputs and outputs are standardized; sensitive information is protected;
+                    interactions are logged; and each draft is supported by explicit assumptions,
+                    evidence, risks, and verification requirements.
                   </p>
                 </article>
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 3</span>
+
                   <h4>Governed Reasoning</h4>
+
                   <p>
-                    AI contributes to an analytical scaffold that separates facts from assumptions, identifies unanswered
-                    questions, makes uncertainty visible, and supports disciplined review.
+                    AI becomes part of an analytical scaffold that separates facts from assumptions,
+                    identifies unanswered questions, makes uncertainty visible,
+                    and supports disciplined professional review.
                   </p>
                 </article>
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 4</span>
+
                   <h4>Governed Workflows &amp; Reusable Assets</h4>
+
                   <p>
-                    Defined roles, approvals, drafting, red-teaming, review, and release processes are combined with
-                    reusable playbooks, clause banks, decision trees, templates, and tested knowledge objects.
+                    Defined roles, approvals, drafting, red-teaming, review, and release processes
+                    are combined with reusable playbooks, clause banks, decision trees,
+                    analytical templates, and tested knowledge objects.
                   </p>
                 </article>
 
                 <article class="maturity-level">
                   <span class="maturity-level-index">Level 5</span>
+
                   <h4>Institutional AI Operating System</h4>
+
                   <p>
-                    Requests, analyses, approvals, exceptions, and decisions move through defined states, gates, records,
-                    and supervisory layers. Responsibilities are clear, institutional memory persists, and actions are traceable.
+                    Requests, analyses, approvals, exceptions, and decisions move through defined states,
+                    gates, records, and supervisory layers. Institutional memory persists,
+                    responsibilities are clear, and consequential actions become traceable.
                   </p>
                 </article>
               </div>
@@ -1599,7 +1650,8 @@
                   <span class="resource-type">Presentation Deck</span>
                   <span class="resource-title">The Maturity Ladder of AI Institutional Implementation</span>
                   <span class="resource-desc">
-                    A visual roadmap of the five levels, from informal prompting to a governed institutional operating system.
+                    A visual roadmap for leaders assessing the transition from informal AI use
+                    to a governed institutional operating system.
                   </span>
                   <span class="resource-arrow">Open Deck ↗</span>
                 </a>
@@ -1611,7 +1663,8 @@
                   <span class="resource-type">Quick-Reference Paper</span>
                   <span class="resource-title">Agentic Structures by Maturity Level</span>
                   <span class="resource-desc">
-                    A concise guide to the agentic structures and governance mechanisms corresponding to each stage of maturity.
+                    A concise guide to the governance mechanisms and agentic structures
+                    associated with each stage of institutional maturity.
                   </span>
                   <span class="resource-arrow">Open Paper ↗</span>
                 </a>
@@ -1623,7 +1676,8 @@
                   <span class="resource-type">Repository</span>
                   <span class="resource-title">AI Governance 2026</span>
                   <span class="resource-desc">
-                    Repository of materials, governance resources, and implementation architectures for institutional AI maturity.
+                    A repository of governance resources, implementation materials,
+                    and institutional AI maturity architectures.
                   </span>
                   <span class="resource-arrow">Open Repository ↗</span>
                 </a>
@@ -1636,23 +1690,28 @@
             <div class="subpillar">
               <div class="section-kicker">Component 3A</div>
 
-              <h3 class="subpillar-title">Implementation of AI Under Governance in Professional Domains</h3>
+              <h3 class="subpillar-title">Governed AI Implementation in Professional Domains</h3>
 
               <p class="subpillar-copy">
-                Practical resources for applying AI within specific domains. The emphasis is on workflow design,
-                governance-first deployment, professional accountability, and useful hands-on examples.
+                Practical resources for leaders and professionals applying AI in real organizational settings.
+                Each domain demonstrates how AI can support professional work without undermining accountability,
+                judgment, client trust, regulatory discipline, or the quality standards expected of institutions.
               </p>
 
               <div class="domain-grid">
                 <article class="domain-card">
                   <div class="domain-index">Domain 1</div>
                   <h4>Corporate Law</h4>
-                  <p>AI for legal workflows, document review, governance, legal analysis, and institutional support.</p>
+                  <p>
+                    Governed AI for legal workflows, document review, corporate governance,
+                    legal analysis, and institutional legal support.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai-law/blob/main/books/BOOK%20AI_LAW.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Book</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai-law/tree/main/notebooks" target="_blank" rel="noopener noreferrer">
                       <span>Colab Notebooks</span><span>↗</span>
                     </a>
@@ -1662,12 +1721,16 @@
                 <article class="domain-card">
                   <div class="domain-index">Domain 2</div>
                   <h4>Accounting and Audit</h4>
-                  <p>AI for accounting, verification, reporting, controls, audit workflows, and structured review.</p>
+                  <p>
+                    Governed AI for accounting, verification, reporting, internal controls,
+                    audit workflows, and structured review.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai-accounting/blob/main/book/AI%20ACCOUNTING%20BOOK.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Book</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai-accounting/tree/main/notebooks" target="_blank" rel="noopener noreferrer">
                       <span>Colab Notebooks</span><span>↗</span>
                     </a>
@@ -1677,12 +1740,16 @@
                 <article class="domain-card">
                   <div class="domain-index">Domain 3</div>
                   <h4>Financial Advice</h4>
-                  <p>AI for planning, client support, explainable recommendations, analysis, and advisory workflows.</p>
+                  <p>
+                    Governed AI for planning, client support, explainable recommendations,
+                    suitability analysis, and advisory workflows.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai-financial_advisors/blob/main/book/AI%20FINANCIAL%20ADVISOR%20BOOK.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Book</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai-financial_advisors/tree/main/NOTEBOOKS" target="_blank" rel="noopener noreferrer">
                       <span>Colab Notebooks</span><span>↗</span>
                     </a>
@@ -1692,12 +1759,16 @@
                 <article class="domain-card">
                   <div class="domain-index">Domain 4</div>
                   <h4>Consulting</h4>
-                  <p>AI for diagnosis, structured problem solving, strategic analysis, and client-ready outputs.</p>
+                  <p>
+                    Governed AI for diagnosis, structured problem solving,
+                    strategic analysis, professional review, and client-ready outputs.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai-consulting/blob/main/book/AI%20CONSULTING.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Book</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai-consulting/tree/main/NOTEBOOKS" target="_blank" rel="noopener noreferrer">
                       <span>Colab Notebooks</span><span>↗</span>
                     </a>
@@ -1707,12 +1778,16 @@
                 <article class="domain-card">
                   <div class="domain-index">Domain 5</div>
                   <h4>Investment Banking</h4>
-                  <p>AI for transactions, financial documents, due diligence, analysis, and execution support.</p>
+                  <p>
+                    Governed AI for transactions, financial documents, due diligence,
+                    analysis, deal preparation, and execution support.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai-investment_banking/blob/main/book/AI%20INVESTMENT%20BANKING%20BOOK.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Book</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai-investment_banking/tree/main/notebooks" target="_blank" rel="noopener noreferrer">
                       <span>Colab Notebooks</span><span>↗</span>
                     </a>
@@ -1729,12 +1804,13 @@
             <div class="subpillar">
               <div class="section-kicker">Component 3B</div>
 
-              <h3 class="subpillar-title">Research and Scientific Discovery in Five Financial Domains</h3>
+              <h3 class="subpillar-title">AI for Science: Discovery and Innovation in Financial Domains</h3>
 
               <p class="subpillar-copy">
-                The AI4S component extends implementation into innovation. It uses agent-governed discovery loops:
-                models propose, deterministic engines compute, stress tests challenge, professionals review,
-                and evaluation mechanisms determine what should advance.
+                The AI4S component moves beyond implementation into disciplined innovation.
+                It introduces agent-governed discovery loops in which models propose,
+                deterministic engines compute, stress tests challenge, professionals review,
+                and evaluation mechanisms determine what should advance into institutional consideration.
               </p>
 
               <div class="resource-row" style="margin-bottom: 24px;">
@@ -1745,7 +1821,8 @@
                   <span class="resource-type">Master Book</span>
                   <span class="resource-title">AI4S in Finance</span>
                   <span class="resource-desc">
-                    The framework for AI for Science in financial-domain discovery, governance, and professional review.
+                    The framework for AI for Science in financial-domain discovery,
+                    governance, agentic workflows, and professional review.
                   </span>
                   <span class="resource-arrow">Open Book ↗</span>
                 </a>
@@ -1757,7 +1834,8 @@
                   <span class="resource-type">Master Deck</span>
                   <span class="resource-title">AI4S: Scientific Discovery in Finance</span>
                   <span class="resource-desc">
-                    An executive view of the AI4S architecture and its financial-domain applications.
+                    An executive view of the AI4S architecture and its applications
+                    across financial and professional domains.
                   </span>
                   <span class="resource-arrow">Open Deck ↗</span>
                 </a>
@@ -1766,7 +1844,8 @@
                   <span class="resource-type">Methodology</span>
                   <span class="resource-title">Agent-Governed Discovery</span>
                   <span class="resource-desc">
-                    Proposal, computation, stress testing, professional review, evaluation, and auditable iteration.
+                    A disciplined architecture of proposal, computation, stress testing,
+                    professional review, evaluation, and auditable iteration.
                   </span>
                   <span class="resource-arrow">Scientific Discovery Layer</span>
                 </div>
@@ -1776,15 +1855,20 @@
                 <article class="domain-card discovery">
                   <div class="domain-index">AI4S Domain 1</div>
                   <h4>Algorithmic Trading</h4>
-                  <p>Hypothesis generation, deterministic backtesting, stress testing, paper simulation, and governance.</p>
+                  <p>
+                    Hypothesis generation, deterministic backtesting, stress testing,
+                    paper simulation, evaluation, and governance.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/papers/AI4S%20ALGO%20TRADING.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Paper</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20ALGO%20TRADING.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Colab</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20ALGO%20TRADING%20FULLY%20AUDITABLE.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Auditable Colab</span><span>↗</span>
                     </a>
@@ -1794,12 +1878,16 @@
                 <article class="domain-card discovery">
                   <div class="domain-index">AI4S Domain 2</div>
                   <h4>Tax Planning &amp; Audit Governance</h4>
-                  <p>Bounded candidate generation, legal validity gates, deterministic computation, and professional review.</p>
+                  <p>
+                    Bounded candidate generation, legal validity gates,
+                    deterministic computation, structured review, and evaluation.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/papers/AI4S%20TAX%20PLANNING.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Paper</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20TAX%20PLANNING.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Colab</span><span>↗</span>
                     </a>
@@ -1809,12 +1897,16 @@
                 <article class="domain-card discovery">
                   <div class="domain-index">AI4S Domain 3</div>
                   <h4>Civil Litigation Strategy</h4>
-                  <p>Ethical gates, synthetic precedent simulation, settlement analysis, attorney review, and evaluation.</p>
+                  <p>
+                    Ethical gates, synthetic precedent simulation, settlement analysis,
+                    attorney review, and accountable evaluation.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/papers/AI4S%20LITIGATION.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Paper</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20LITIGATION.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Colab</span><span>↗</span>
                     </a>
@@ -1824,12 +1916,16 @@
                 <article class="domain-card discovery">
                   <div class="domain-index">AI4S Domain 4</div>
                   <h4>Financial Advice</h4>
-                  <p>Goal-based planning, Monte Carlo simulation, fiduciary review, stress testing, and advisor iteration.</p>
+                  <p>
+                    Goal-based planning, Monte Carlo simulation, fiduciary review,
+                    stress testing, behavioral warnings, and advisor iteration.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/papers/AI4S%20FINANCIAL%20ADVISE.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Paper</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20FINANCIAL%20ADVISE.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Colab</span><span>↗</span>
                     </a>
@@ -1839,12 +1935,16 @@
                 <article class="domain-card discovery">
                   <div class="domain-index">AI4S Domain 5</div>
                   <h4>Investment Banking &amp; M&amp;A</h4>
-                  <p>Valuation, synergy modeling, financing analysis, regulatory screening, review, and deal governance.</p>
+                  <p>
+                    Valuation, synergy modeling, financing analysis, regulatory screening,
+                    senior review, and board-ready deal governance.
+                  </p>
 
                   <div class="domain-links">
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/papers/AI4S%20INVESTMENT%20BANKING.pdf" target="_blank" rel="noopener noreferrer">
                       <span>Paper</span><span>↗</span>
                     </a>
+
                     <a href="https://github.com/alexdibol/ai4s_financial_domain/blob/main/notebooks/COLAB%20INVESTMENT%20BANKING.ipynb" target="_blank" rel="noopener noreferrer">
                       <span>Colab</span><span>↗</span>
                     </a>
@@ -1863,10 +1963,12 @@
     <section class="page" id="access">
       <div class="callout">
         <div>
-          <h2>Understand. Govern. Implement. Discover.</h2>
+          <h2>Understand. Govern. Lead. Implement. Discover.</h2>
+
           <p>
-            The AI Summer Course is a preparation pathway for leaders facing the institutional adoption of AI.
-            It develops literacy without simplification, governance without abstraction, and implementation without sacrificing accountability.
+            The AI Summer Course is a leadership preparation pathway for institutions facing profound technological change.
+            It develops AI literacy without simplification, governance without abstraction,
+            and implementation capability without sacrificing accountability, professional judgment, or public trust.
           </p>
         </div>
 
@@ -1893,12 +1995,11 @@
 
       <div class="copyright">
         © 2026 Alejandro Reynoso. All rights reserved.<br />
-        Understand AI. Govern AI. Implement AI responsibly.
+        Understanding AI. Governing AI. Leading responsible institutional change.
       </div>
     </div>
   </footer>
 </body>
 </html>
-
 
 
